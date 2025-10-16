@@ -1,17 +1,24 @@
+#include <iostream>
+using namespace std;
+
 int main() {
-   
-    int score1, score2, score3;
-    cout << "請輸入3次分數(0~100): ";
-    cin >> score1 >> score2 >> score3;
-    double averageScore = (score1 + score2 + score3)/3;
-    if (score1 < 40 || score2 < 40 || score3 < 40) {
-        cout << "不及格\n";
-    } else if (averageScore >= 60) {
-        cout << "你及格\n";
-    } else if (averageScore < 60) {
-        cout << "不及格\n";
+    // 印出星號三角形
+    for (int i = 1; i <= 6; ++i) {
+        for (int j = 1; j <= i; ++j) {
+            cout << "*";
+        }
+        cout << endl;
     }
-    cout << "你的平均為: \a" << averageScore;
+
+    cout << endl; // 空一行分隔兩個輸出
+
+    // 印出九九乘法表
+    for (int i = 1; i <= 9; ++i) {
+        for (int j = 1; j <= 9; ++j) {
+            cout << i << " * " << j << " = " << i * j << "\t";
+        }
+        cout << endl;
+    }
 
     return 0;
 }
