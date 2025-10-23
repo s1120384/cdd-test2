@@ -1,24 +1,29 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
-    // 印出星號三角形
-    for (int i = 1; i <= 6; ++i) {
-        for (int j = 1; j <= i; ++j) {
-            cout << "*";
+    int score[10] = {85, 90, 60, 92, 100, 76, 50, 89, 84, 40};
+    int gradeCount[5] = {0};
+    for (int i = 0; i < 10; ++i) {
+        if (score[i] >= 90) {
+            gradeCount[0]++;
+        } else if (score[i] >= 80) {
+            gradeCount[1]++;
+        } else if (score[i] >= 70) {
+            gradeCount[2]++;
+        } else if (score[i] >= 60) {
+            gradeCount[3]++;
+        } else {
+            gradeCount[4]++;
         }
-        cout << endl;
     }
 
-    cout << endl; // 空一行分隔兩個輸出
-
-    // 印出九九乘法表
-    for (int i = 1; i <= 9; ++i) {
-        for (int j = 1; j <= 9; ++j) {
-            cout << i << " * " << j << " = " << i * j << "\t";
-        }
-        cout << endl;
-    }
+    cout << "A等人數: " << gradeCount[0] << endl;
+    cout << "B等人數: " << gradeCount[1] << endl;
+    cout << "C等人數: " << gradeCount[2] << endl;
+    cout << "D等人數: " << gradeCount[3] << endl;
+    cout << "F等人數: " << gradeCount[4] << endl;
 
     return 0;
 }
